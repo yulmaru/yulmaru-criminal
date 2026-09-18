@@ -1,0 +1,32 @@
+/* Supplied palette: cyan accent #21d3fe and deep navy #071a38. */
+.quick-menu,.mobile-bar{
+  --gradient-main:linear-gradient(145deg,#21d3fe 0%,#5297ff 52%,#9144fa 100%);
+  --cyan:#21d3fe;--violet:#9144fa;
+  background:rgba(7,26,56,.97);
+  border-color:rgba(33,211,254,.28);
+}
+.quick-menu>a,.quick-menu>button{background:#071a38;color:#e9ebf0;border-bottom-color:rgba(33,211,254,.16)}
+.quick-menu span{color:#c5c8ce}
+.quick-menu>.quick-reserve{background:var(--gradient-main);color:#071a38}
+.quick-menu .quick-reserve span{color:#071a38}
+.quick-menu>a:hover,.quick-menu>button:hover{background:#232831;color:#21d3fe}
+.quick-menu>.quick-reserve:hover{background:var(--gradient-main);filter:brightness(1.05);color:#071a38}
+.quick-menu>a:focus-visible,.quick-menu>button:focus-visible,.mobile-bar>a:focus-visible,.mobile-bar>button:focus-visible{outline:2px solid #21d3fe;outline-offset:-3px}
+.quick-booking-menu,.quick-chat-menu,.mobile-booking-menu,.mobile-chat-menu{background:linear-gradient(145deg,#071a38,#232831);border-color:rgba(33,211,254,.3)}
+.quick-booking-menu::after,.quick-chat-menu::after,.mobile-booking-menu::after,.mobile-chat-menu::after{background:#232831;border-color:rgba(33,211,254,.3)}
+.quick-booking-menu a,.quick-chat-menu a,.mobile-booking-menu a,.mobile-chat-menu a{color:#e9ebf0;border-color:rgba(33,211,254,.2);background:rgba(33,211,254,.05)}
+.quick-booking-menu a:hover,.quick-booking-menu a:focus-visible,.quick-chat-menu a:hover,.quick-chat-menu a:focus-visible,.mobile-booking-menu a:active,.mobile-chat-menu a:active{background:var(--gradient-main);color:#071a38}
+@media(max-width:720px){
+  html{background:#1f1f1f}
+  body{padding-bottom:0}
+  .mobile-bar>a,.mobile-bar>button{color:#c5c8ce}
+  .mobile-bar>a>i,.mobile-bar>button>i{color:#e9ebf0}
+  .mobile-bar .mobile-reserve{color:#21d3fe}
+  .mobile-bar .mobile-reserve>i{color:#071a38;background:var(--gradient-main);border-color:#dcf7ff;animation:limeReservePulse 2.4s ease-in-out infinite}
+  .mobile-bar>a:active,.mobile-bar>.mobile-chat:active{color:#21d3fe}
+}
+@keyframes limeReservePulse{
+  0%,100%{box-shadow:0 0 0 4px rgba(33,211,254,.13),0 8px 22px rgba(82,151,255,.24)}
+  50%{box-shadow:0 0 0 8px rgba(33,211,254,.07),0 10px 28px rgba(82,151,255,.34)}
+}
+@media(prefers-reduced-motion:reduce){.mobile-bar .mobile-reserve>i{animation:none}}
